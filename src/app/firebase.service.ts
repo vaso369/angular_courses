@@ -283,7 +283,7 @@ export class FirebaseService {
         console.log('user signed Out successfully');
         // set current user to null to be logged out
         this.currentUser = null;
-        // set the listenener to be null, for the UI to react
+        // set the listenener to be null
         this.setUserStatus(null);
         this.resetCourses();
         this.ngZone.run(() => this.router.navigate(['/login']));
