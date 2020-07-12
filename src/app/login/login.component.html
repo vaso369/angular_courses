@@ -6,5 +6,5 @@
   <label for="password">Password:</label>
   <input type="password" name="password" formControlName="password" />
 
-  <input type="submit" [disabled]="!loginForm.valid" value="Log In" />
+  <input type="submit" [disabled]="processing" value="Log In" />
 </form>
