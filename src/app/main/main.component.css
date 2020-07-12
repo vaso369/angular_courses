@@ -1,0 +1,16 @@
+.main__sidebar {
+  width: 20%;
+  height: 100%;
+  background: #f4dda8;
+}
+
+.main__board {
+  width: 100%;
+  height: 100%;
+  background: #84cde6;
+}
+
+.main__videos {
+  display: flex;
+  flex-flow: wrap;
+}

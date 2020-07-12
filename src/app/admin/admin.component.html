@@ -1,0 +1,49 @@
+<div class="course">
+  <div id="videos__main">
+    <iframe
+      *ngIf="courses?.length > 0"
+      width="920"
+      height="650"
+      [src]="'https://www.youtube.com/embed/' + videoPath | safe"
+    >
+    </iframe>
+    <div *ngIf="!courses?.length > 0">
+      <p class="no_courses">There is no courses to add!</p>
+    </div>
+    <div class="btn__conteiner d-flex" *ngIf="courses?.length > 0">
+      <button
+        class="btn btn-primary"
+        (click)="handleDispatch()"
+        routerLink="/admin"
+      >
+        Add video
+      </button>
+      <button
+        class="btn btn-danger ml-2"
+        (click)="handleDispatchDelete()"
+        routerLink="/admin"
+      >
+        Delete video
+      </button>
+    </div>
+  </div>
+  <div id="videos" *ngIf="courses?.length > 0">
+    <div
+      *ngFor="let course of courses"
+      #DivRef
+      (click)="handleClick($event)"
+      class="elem"
+    >
+      <iframe
+        class="side_video"
+        #IframeRef
+        (click)="handleClick($event)"
+        width="400"
+        height="315"
+        [src]="'https://www.youtube.com/embed/' + course.path | safe"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>

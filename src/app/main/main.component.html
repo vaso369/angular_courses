@@ -1,0 +1,22 @@
+<section class="main d-flex">
+  <div class="main__board d-flex justify-content-around align-items-center">
+    <div *ngFor="let course of courses">
+      <div class="card" style="width: 18rem;">
+        <img [src]="course.img | safe" alt="" class="m-0 img-fluid w-100" />
+        <div class="card-body">
+          <h5 class="card-title">{{ course.name }}</h5>
+          <p class="card-text">
+            {{ course.description }}
+          </p>
+          <a
+            class="btn btn-primary"
+            href="#"
+            [routerLink]="['/course', course.id]"
+          >
+            WATCH
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

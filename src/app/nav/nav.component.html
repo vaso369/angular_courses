@@ -1,0 +1,29 @@
+<nav class="container-fluid d-flex">
+  <div class="logo_section">
+    <img
+      class="logo"
+      src="../../assets/images/courses_logo.png"
+      alt="Courses logo"
+    />
+    <h1 class="pl-5"><a [routerLink]="['/']" class="text-dark">courses</a></h1>
+  </div>
+
+  <div class="ml-auto">
+    <ul>
+      <li>
+        <a [routerLink]="['/signup']" *ngIf="href === '/login'">Signup</a>
+      </li>
+      <li>
+        <a [routerLink]="['/login']" *ngIf="href === '/signup'">Login</a>
+      </li>
+      <li *ngIf="userStatus && userStatus.role === 'user'">
+        <a [routerLink]="['/admin']" class="text-dark">{{
+          userStatus.username
+        }}</a>
+      </li>
+      <li *ngIf="userStatus">
+        <button class="logout" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>

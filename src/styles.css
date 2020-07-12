@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+
+HTML {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: url(./assets/images/task-management.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #eee;
+  font-family: 'Poppins';
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 2px solid grey;
+  height: 10vh;
+}
+
+nav ul {
+  margin: 0px;
+  /* padding-top: 10px; */
+  /* padding: 0 2%; */
+}
+a:hover {
+  text-decoration: none !important;
+}
+nav ul li a {
+  color: #84cde6;
+  text-decoration: none !important;
+}
+nav ul:first-of-type li a {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav ul:last-of-type li {
+  margin-right: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+header {
+  height: 430px;
+}
+
+header div {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+header div h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+  margin-bottom: -10px;
+}
+header div img {
+  position: absolute;
+  right: 0px;
+  top: -140px;
+  width: 100%;
+  max-width: 700px;
+}
+.main {
+  width: 100%;
+  height: 90vh;
+  /* border-radius: 10px; */
+  /* margin: 0 auto; */
+  background: #eee;
+  /* padding: 10px 0; */
+  color: #222;
+  text-align: center;
+}
+.main img {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main p {
+  margin: 20px auto;
+}
+
+.logout {
+  background: #84cde6;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+form {
+  /* background: #eee; */
+  color: #222;
+  width: 21%;
+  height: 90vh;
+  background: #fff;
+  /* margin: 0 auto 50px auto; */
+  padding: 10px;
+  text-align: center;
+  /* border-radius: 10px; */
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  /* border: 1px solid black; */
+}
+form p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+form label,
+form input {
+  display: block;
+  margin: 10px auto;
+}
+
+form input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #222;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+form input[type='submit'] {
+  margin-top: 20px;
+  width: 37%;
+  border: none;
+  background: #84cde6; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  color: #fff;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+}
+.course {
+  display: flex;
+
+  background: #fff;
+}
+.elem {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.elem::before {
+  content: '';
+  height: 315px;
+  width: 400px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#videos {
+  width: 100%;
+  height: 90vh;
+  overflow: scroll;
+}
+
+#videos__main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+iframe {
+  margin: 2rem 0 0 2rem;
+  width: 810px;
+  height: 570px;
+}
+.side_video {
+  width: 85%;
+  height: 200px;
+}

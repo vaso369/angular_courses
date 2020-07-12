@@ -1,0 +1,16 @@
+<form (ngSubmit)="signup(signUpForm.value)" [formGroup]="signUpForm">
+  <h2 class="color">Sign up</h2>
+  <label for="email">Email:</label>
+  <input type="email" name="email" formControlName="email" />
+  <p *ngIf="!signUpForm.get('email').valid" class="text-danger">
+    Please enter email in regular format!
+  </p>
+  <label for="password">Password:</label>
+  <input type="password" name="password" formControlName="password" />
+
+  <p *ngIf="!signUpForm.get('password').valid" class="text-danger">
+    Password must be at least 6 characters!
+  </p>
+
+  <input type="submit" value="Sign Up" />
+</form>

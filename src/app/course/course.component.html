@@ -1,0 +1,36 @@
+<div class="course">
+  <div id="videos__main">
+    <iframe
+      width="920"
+      height="650"
+      [src]="'https://www.youtube.com/embed/' + videoPath | safe"
+    >
+    </iframe>
+    <a
+      class="btn btn-primary"
+      (click)="handleDispatch()"
+      href="#"
+      routerLink="/add-course"
+      >Add video</a
+    >
+  </div>
+  <div id="videos">
+    <div
+      *ngFor="let course of courses"
+      #DivRef
+      (click)="handleClick($event)"
+      class="elem"
+    >
+      <iframe
+        class="side_video"
+        #IframeRef
+        (click)="handleClick($event)"
+        width="400"
+        height="315"
+        [src]="'https://www.youtube.com/embed/' + course.path | safe"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
